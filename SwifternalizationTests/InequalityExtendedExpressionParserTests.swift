@@ -16,7 +16,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher1() {
-        let m = createMatcher("iex:4<x<10")
+        let m = createMatcher(pattern: "iex:4<x<10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.GreaterThan, "")
         XCTAssertEqual(m.leftMatcher.value, 4, "")
         
@@ -25,7 +25,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher2() {
-        let m = createMatcher("iex:4<=x<=10")
+        let m = createMatcher(pattern: "iex:4<=x<=10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.GreaterThanOrEqual, "")
         XCTAssertEqual(m.leftMatcher.value, 4, "")
         
@@ -34,7 +34,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher3() {
-        let m = createMatcher("iex:4<=x<=10")
+        let m = createMatcher(pattern: "iex:4<=x<=10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.GreaterThanOrEqual, "")
         XCTAssertEqual(m.leftMatcher.value, 4, "")
         
@@ -43,7 +43,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher4() {
-        let m = createMatcher("iex:4<x<10")
+        let m = createMatcher(pattern: "iex:4<x<10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.GreaterThan, "")
         XCTAssertEqual(m.leftMatcher.value, 4, "")
         
@@ -52,7 +52,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher5() {
-        let m = createMatcher("iex:4<=x<10")
+        let m = createMatcher(pattern: "iex:4<=x<10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.GreaterThanOrEqual, "")
         XCTAssertEqual(m.leftMatcher.value, 4, "")
         
@@ -61,7 +61,7 @@ class InequalityExtendedExpressionParserTests: XCTestCase {
     }
     
     func testMatcher6() {
-        let m = createMatcher("iex:-4<=x<-10")
+        let m = createMatcher(pattern: "iex:-4<=x<-10")
         XCTAssertEqual(m.leftMatcher.sign, InequalitySign.LessThanOrEqual, "")
         XCTAssertEqual(m.leftMatcher.value, -4, "")
         

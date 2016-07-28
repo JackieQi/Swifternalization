@@ -13,39 +13,39 @@ class JSONFileLoaderTests: XCTestCase {
     
     // Expressions
     func loadExpressions(cc: CountryCode) -> Dictionary<String, String> {
-        return JSONFileLoader.loadExpressions(cc, bundle: NSBundle.testBundle())
+        return JSONFileLoader.loadExpressions(cc, bundle: Bundle.testBundle())
     }
     
     func testShouldLoadBaseExpressions() {
-        XCTAssertFalse(loadExpressions("base").isEmpty, "")
+        XCTAssertFalse(loadExpressions(cc: "base").isEmpty, "")
     }
     
     func testShouldLoadPLExpressions() {
-        XCTAssertFalse(loadExpressions("pl").isEmpty, "")
+        XCTAssertFalse(loadExpressions(cc: "pl").isEmpty, "")
     }
     
     func testShouldLoadRUExpressions() {
-        XCTAssertFalse(loadExpressions("ru").isEmpty, "")
+        XCTAssertFalse(loadExpressions(cc: "ru").isEmpty, "")
     }
     
     func testShouldNotLoadDEExpressions() {
-        XCTAssertTrue(loadExpressions("de").isEmpty, "")
+        XCTAssertTrue(loadExpressions(cc: "de").isEmpty, "")
     }
     
     // Translations
     func loadTranslations(cc: CountryCode) -> JSONDictionary {
-        return JSONFileLoader.loadTranslations(cc, bundle: NSBundle.testBundle())
+        return JSONFileLoader.loadTranslations(cc, bundle: Bundle.testBundle())
     }
 
     func testShouldLoadBaseTranslations() {
-        XCTAssertFalse(loadTranslations("base").isEmpty, "")
+        XCTAssertFalse(loadTranslations(cc: "base").isEmpty, "")
     }
     
     func testShouldLoadPLTranslations() {
-        XCTAssertFalse(loadTranslations("pl").isEmpty, "")
+        XCTAssertFalse(loadTranslations(cc: "pl").isEmpty, "")
     }
     
     func testShouldNotLoadDETranslations() {
-        XCTAssertTrue(loadTranslations("de").isEmpty, "")
+        XCTAssertTrue(loadTranslations(cc: "de").isEmpty, "")
     }
 }
