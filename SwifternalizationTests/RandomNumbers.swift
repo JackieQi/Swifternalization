@@ -9,7 +9,7 @@
 import Foundation
 
 /// http://stackoverflow.com/a/28075271/1046965
-func arc4random <T: IntegerLiteralConvertible> (type: T.Type) -> T {
+func arc4random <T: ExpressibleByIntegerLiteral> (type: T.Type) -> T {
     var r: T = 0
     arc4random_buf(&r, Int(sizeof(T.self)))
     return r
