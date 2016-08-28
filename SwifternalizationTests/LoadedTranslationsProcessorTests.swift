@@ -27,7 +27,7 @@ class LoadedTranslationsProcessorTests: XCTestCase {
         ]
     }
     
-    private func _baseTranslations() -> Dictionary<String, AnyObject> {
+    private func _baseTranslations() -> Dictionary<String, Any> {
         return [
             "k1": "v1",
             "k2": "v2",
@@ -36,7 +36,7 @@ class LoadedTranslationsProcessorTests: XCTestCase {
         ]
     }
     
-    private func _enTranslations() -> Dictionary<String, AnyObject> {
+    private func _enTranslations() -> Dictionary<String, Any> {
         return [
             "k1": "v1",
             "k2": [

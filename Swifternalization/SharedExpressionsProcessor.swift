@@ -87,7 +87,7 @@ class SharedExpressionsProcessor {
     }
 }
 
-infix operator <! {}
+infix operator <! : LogicalConjunctionPrecedence
 /**
 "Get Unique" operator. It helps in getting unique shared expressions from two arrays.
 Content of `lhs` array will be checked in terms on uniqueness. The operator does

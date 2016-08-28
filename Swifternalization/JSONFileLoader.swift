@@ -3,7 +3,7 @@ import Foundation
 /**
 Represents json content.
 */
-internal typealias JSONDictionary = Dictionary<String, AnyObject>
+internal typealias JSONDictionary = Dictionary<String, Any>
 
 /**
 Simple JSON file loader.
